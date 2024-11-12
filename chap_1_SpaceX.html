@@ -1,0 +1,43 @@
+<html> 
+<head>
+    <meta charset="utf-8">
+    <title>SpaceX</title>
+    <link rel="stylesheet" href="assets/mysite.css">
+</head>
+
+
+
+<body>
+    <header>
+        SpaceX
+    </header>
+<div class="menu-article">
+
+    <div id="menu"></div>
+
+    <script>
+        fetch('assets/menu.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('menu').innerHTML = data;
+            });
+    </script>
+<div class="article-s">
+    <article>
+        <h5>SpaceX</h5>
+        <a href="https://ru.wikipedia.org/wiki/SpaceX">SpaceX</a> (Корпорация технологий освоения космоса) - американская компания, производитель космической техники.
+        Создал её Илон Маск. После ухода из PayPal он начал интересоваться компаниями по исследованию космоса.В 2001 году он встретился с основателем Марсианского сообщества Робертом Зубриным и выделил его компании 100000 долларов, войдя в совет директоров. Он выступил с речью на их четвёртом съезде, где рассказал о Mars Oasis — проекте по созданию теплицы и выращиванию растений на Марсе. В июне 2002 года Илон Маск основал компанию и назвал её Space X.
+
+
+
+
+        <!--
+        <canvas id="gameCanvas" width="400" height="300"></canvas>
+        <script type="module" src="assets/game-past.js"></script>-->
+    </article>
+</div>
+</div>
+    <footer>
+        Создали крутые челы
+    </footer>
+</body>
