@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Starship</title>
+    <link rel="stylesheet" href="assets/mysite.css" />
+  </head>
+
+  <body>
+    <header>SpaceX Starship</header>
+    <div class="menu-article">
+      <div id="menu"></div>
+
+      <script>
+        fetch("assets/menu.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("menu").innerHTML = data;
+          });
+      </script>
+      <div class="article-s">
+        <article>
+            <div style="">
+          <h5>SpaceX Starship</h5>
+          <p>
+            <img class="modal-image image-in-text" src="assets/images/chap_2/Starship-IFT2-ascent_(close_cropped).jpg" alt="Starship во время второго совместного испытательного полёта (18.11.2023)" style="max-width: 300; float: right; width: 40%;">
+            Starship &mdash; разрабатываемая компанией SpaceX полностью
+            многоразовая ракета-носитель, предназначенная для экономичной
+            доставки грузов и людей на околоземные орбиты, а также для
+            межпланетных полётов на Луну и Марс. Самая массивная и мощная ракета
+            в мире на данный момент. Состоит из двух ступеней: Ускорителя
+            <a href="#">
+              <span class="couponcode">
+                Super Heavy
+                <span class="tooltip">
+                  <img
+                  src="assets/images/chap_2/Starship_Booster_Return_on_Final_Approach.jpg"/
+                  class="toolltip_img" width="220">
+                  <br />
+
+                  Посадка Super Heavy в<br />клешнибашни-манипулятора<br />«Mechazilla»
+                </span></span></a>
+
+            и космического корабля
+            <span class="couponcode"
+              >Starship
+              <span class="tooltip">
+                <img
+                  src="assets/images/chap_2/Starship_S20.jpg"
+                  class="toolltip_img"
+                  width="220"
+                />
+                <br />
+                Прототип Starship SN20<br />на космодроме
+              </span></span>
+          </p>
+        
+        </div>
+
+
+
+
+
+
+
+
+        </article>
+      </div>
+    </div>
+    <footer>Создали крутые челы</footer>
+    <script src="assets/tooltip.js"></script>
+    <script src="assets/modal.js"></script>
+  </body>
+</html>

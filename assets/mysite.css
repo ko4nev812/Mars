@@ -4,6 +4,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     color: #333;
+    font-size: 17px;
 }
 
 
@@ -24,7 +25,7 @@ menu {
     padding: 20px;
     float: left;
     margin-top: 5px;
-    
+    width: 20%;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
@@ -45,6 +46,7 @@ article {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     box-sizing: border-box;
     margin-bottom: 15px;
+    overflow: hidden;
 }
 .menu-article{
     display:flex;
@@ -62,18 +64,27 @@ footer {
 }
 
 a {
-    color: blueviolet;
+    color: rgb(43, 86, 226);
     text-decoration: none;
     transition: color 0.3s ease;
+    
 }
 
 a:hover {
-    color: rgb(105, 11, 145);
-    text-decoration: underline;
+    color: rgba(221, 98, 50, 0.747);
+    text-decoration:none;
+    outline: 2px ridge rgba(226, 47, 172, 0.507);
+    border-radius: 1rem;
+    
 }
 
 a:visited {
-    color: darkviolet;
+    color: rgb(17, 121, 240);
+}
+a:active {
+    outline:2px ridge  rgba(161, 26, 82, 0.87);
+    transition: outline 0.3s ease;
+    
 }
 
 
@@ -101,6 +112,95 @@ canvas {
 
 .nav-buttons a:hover {
     background-color: rgba(255, 68, 0, 0.555);
+    color: rgb(255, 253, 226);
+}
+.nav-buttons a:active{
+    transition: outline 0.3s ease;
+}
+
+img{
+    border-radius: 8px;
+    height: auto;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 5%;
+  
+}
+.modal.fade-out {
+  animation: fadeOut 0.3s ease-out;
+}
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 700px;
+  width: 80%;
+  height: auto;
+  animation: fadeIn 0.6s;
+  transition: filter 0.3s ease, transform 0.3s ease;
+  
+}
+.modal-image:hover {
+  filter: brightness(60%);
+}
+.modal-image{
+  cursor: pointer;
+  transition: 0.2s;
+}
+.caption {
+  margin: 15px auto;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  z-index: 1001;
+}
+
+.close:hover,
+.close:focus {
+  color: #f00;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.1);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
 }
 
 /* Анимация падающих звезд */
@@ -110,11 +210,47 @@ canvas {
     left: 0;
     z-index: -2;
 }
+.couponcode {
+  color: red;
+  cursor: pointer;
+}
+
+.couponcode:hover .tooltip {
+  display: block;
+}
+
+.tooltip {
+  position: absolute;
+  white-space: nowrap;
+  display: none;
+  background: #f1ffccb2;
+  border: 1px solid rgba(0, 0, 0, 0.719);
+  padding: 5px;
+  z-index: 1000;
+  color: rgb(0, 0, 0);
+  overflow: hidden; /* Скройте лишнее */
+  margin: 5px;
+}
+.toolltip_img{
+  border-radius: 5px;
+  margin-bottom: 4px;
+
+}
 
 
 
 
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 
 
 
-
+.image-in-text{
+  margin: 0 10px 10px 0;
+}
