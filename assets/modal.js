@@ -39,7 +39,12 @@ document.addEventListener("keydown", function (event) {
 });
   // Закрытие модального окна с анимацией
   const closeModal = () => {
-      modal.classList.add('fade-out');
+      // modal.classList.add('fade-out');
+      var animation = modal.animate([
+        {opacity: '0'}
+      ], 500);
+
+
       setTimeout(() => {
           modal.style.display = 'none';
       }, 290); // Задержка должна совпадать с длительностью анимации fadeOut
