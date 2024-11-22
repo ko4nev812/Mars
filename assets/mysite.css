@@ -213,6 +213,7 @@ img{
 .couponcode {
   color: red;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .couponcode:hover .tooltip {
