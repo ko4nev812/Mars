@@ -34,7 +34,7 @@ document.addEventListener("keydown", function (event) {
     modal.classList.add('fade-out');
     setTimeout(() => {
       modal.style.display = 'none';
-  }, 300); // Задержка должна совпадать с длительностью анимации fadeOut
+  }, 290); // Задержка должна совпадать с длительностью анимации fadeOut
   }
 });
   // Закрытие модального окна с анимацией
@@ -42,7 +42,7 @@ document.addEventListener("keydown", function (event) {
       modal.classList.add('fade-out');
       setTimeout(() => {
           modal.style.display = 'none';
-      }, 300); // Задержка должна совпадать с длительностью анимации fadeOut
+      }, 290); // Задержка должна совпадать с длительностью анимации fadeOut
   };
 
   closeBtn.addEventListener('click', closeModal);
