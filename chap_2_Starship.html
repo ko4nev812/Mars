@@ -8,21 +8,23 @@
   <body>
     <header>SpaceX Starship</header>
     <div class="menu-article">
-      <div id="menu"></div>
-
-      <script>
-        fetch("assets/menu.html")
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById("menu").innerHTML = data;
-          });
-      </script>
+      <div><menu>
+        <div class="nav-buttons noselect">
+            <a href="index.html">Начальная страница</a><br>
+            <hr>
+            <a href="chap_1_SpaceX.html">Кто такие SpaceX</a><br>
+            <hr>
+            <a href="chap_2_Starship.html">Starship SpaceX</a>
+            <hr>
+            <a href="starship_tour.html">Экскурсия по Starship</a><br>
+        </div>
+    </menu></div>
       <div class="article-s">
         <article>
-            <div style="">
+            <div>
           <h5>SpaceX Starship</h5>
           <p>
-            <img class="modal-image image-in-text" src="assets/images/chap_2/Starship-IFT2-ascent_(close_cropped).jpg" alt="Starship во время второго совместного испытательного полёта (18.11.2023)" style="max-width: 300; float: right; width: 40%;">
+            <img class="modal-image image-in-text" src="assets/images/chap_2/Starship_19_11_2024.jpg" alt="Starship во время второго совместного испытательного полёта (18.11.2023)" style="max-width: 180px; float: right; width: 40%;">
             Starship &mdash; разрабатываемая компанией SpaceX полностью
             многоразовая ракета-носитель, предназначенная для экономичной
             доставки грузов и людей на околоземные орбиты, а также для
@@ -33,8 +35,8 @@
                 Super Heavy
                 <span class="tooltip">
                   <img
-                  src="assets/images/chap_2/Starship_Booster_Return_on_Final_Approach.jpg"/
-                  class="toolltip_img" width="220">
+                  src="assets/images/chap_2/Starship_Booster_Return_on_Final_Approach.jpg"
+                  class="toolltip_img" width="220px">
                   <br />
 
                   Посадка Super Heavy в<br />клешнибашни-манипулятора<br />«Mechazilla»
@@ -68,6 +70,8 @@
       </div>
     </div>
     <footer>Создали крутые челы</footer>
+    <canvas id="starCanvas" class="stars_backgrouns"></canvas>
+    <script src="assets/stars.js"></script>
     <script src="assets/tooltip.js"></script>
     <script src="assets/modal.js"></script>
   </body>

@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Создание структуры модального окна
-  const modal = document.createElement('div');
+  const modal = document.createElement('figure');
   modal.className = 'modal';
-
+  
   const closeBtn = document.createElement('span');
   closeBtn.className = 'close';
   closeBtn.innerHTML = '&times;';
@@ -28,21 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
           caption.textContent = img.alt || ''; // Используем alt-текст
       });
   });
-  // Закрытие модального окна при нажатии клавиши Esc
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape" && modal) {
-    modal.classList.add('fade-out');
-    setTimeout(() => {
-      modal.style.display = 'none';
-  }, 290); // Задержка должна совпадать с длительностью анимации fadeOut
-  }
-});
+
   // Закрытие модального окна с анимацией
   const closeModal = () => {
       // modal.classList.add('fade-out');
       var animation = modal.animate([
         {opacity: '0'}
-      ], 500);
+      ], 290);
 
 
       setTimeout(() => {
@@ -57,4 +49,10 @@ document.addEventListener("keydown", function (event) {
           closeModal();
       }
   });
+    // Закрытие модального окна при нажатии клавиши Esc
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape" && modal) {
+    closeModal();
+  }
+});
 });

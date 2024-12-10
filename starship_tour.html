@@ -12,18 +12,22 @@
         Виртуальная прогулка по Starship
     </header>
     <div class="menu-article">
-    <div id="menu"></div>
-
-    <script>
-        fetch('assets/menu.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('menu').innerHTML = data;
-            });
-    </script>
+        <div><menu>
+            <div class="nav-buttons noselect">
+                <a href="index.html">Начальная страница</a><br>
+                <hr>
+                <a href="chap_1_SpaceX.html">Кто такие SpaceX</a><br>
+                <hr>
+                <a href="chap_2_Starship.html">Starship SpaceX</a>
+                <hr>
+                <a href="starship_tour.html">Экскурсия по Starship</a><br>
+            </div>
+        </menu></div>
 <div class="article-s" style="width: 100%;">
     <article style="width: 100%;">
-        <h5>Для запуска нажмите "Click to Enter" или нажмите Enter</h5>
+        <h5>Для запуска нажмите "Click to Enter" или нажмите Enter
+            
+        </h5>
         
         <iframe src="https://starship.mobile.my3ideas.com" width="100%" height="500px" frameborder="0"></iframe>
     
@@ -36,4 +40,6 @@
     <footer>
         Создали крутые челы
     </footer>
+    <canvas id="starCanvas" class="stars_backgrouns"></canvas>
+    <script src="assets/stars.js"></script>
 </body>
